@@ -5,9 +5,5 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   base: '/greetings/',
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      input: '/index.html'
-    }
-  }
+
 })
