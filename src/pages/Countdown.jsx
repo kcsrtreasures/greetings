@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import DWB from "/donwithbike.jpg";
+import HDB from "/hbd.mp3";
 
 const Countdown = () => {
   const [started, setStarted] = useState(false);
@@ -75,16 +77,17 @@ const Countdown = () => {
             lineHeight: '50vh',
             margin: 0,
             userSelect: 'none',
-          }}
+          }
+        }
         >
           {secondsLeft}
         </p>
       ) : (
         <>
-          <audio ref={audioRef} src="/hbd.mp3" loop />
+          <audio ref={audioRef} src={HDB} loop />
           {renderBalloons()}
           <img
-            src="/donwithbike.jpg"
+            src={DWB}
             alt="Don with Bike"
             className="object-cover rounded-xl z-20"
             style={{
